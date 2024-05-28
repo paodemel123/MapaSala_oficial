@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MapaSala.Formularios;
 
 namespace MapaSala
 {
@@ -20,6 +21,17 @@ namespace MapaSala
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSalas s = new frmSalas();
+            s.ShowDialog();
         }
     }
 }
