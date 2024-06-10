@@ -37,6 +37,11 @@ namespace MapaSala.Formularios
             this.label3 = new System.Windows.Forms.Label();
             this.numId = new System.Windows.Forms.NumericUpDown();
             this.dtGridDisciplina = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Disciplina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sigla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplina)).BeginInit();
             this.SuspendLayout();
@@ -102,10 +107,42 @@ namespace MapaSala.Formularios
             // dtGridDisciplina
             // 
             this.dtGridDisciplina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridDisciplina.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Disciplina,
+            this.Sigla,
+            this.Editar,
+            this.Excluir});
             this.dtGridDisciplina.Location = new System.Drawing.Point(12, 65);
             this.dtGridDisciplina.Name = "dtGridDisciplina";
             this.dtGridDisciplina.Size = new System.Drawing.Size(616, 359);
             this.dtGridDisciplina.TabIndex = 7;
+
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // Disciplina
+            // 
+            this.Disciplina.HeaderText = "Disciplina";
+            this.Disciplina.Name = "Disciplina";
+            // 
+            // Sigla
+            // 
+            this.Sigla.HeaderText = "Sigla";
+            this.Sigla.Name = "Sigla";
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            // 
+            // Excluir
+            // 
+            this.Excluir.HeaderText = "Excluir";
+            this.Excluir.Name = "Excluir";
             // 
             // frmDisciplina
             // 
@@ -140,5 +177,10 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numId;
         private System.Windows.Forms.DataGridView dtGridDisciplina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Disciplina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Sigla;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Excluir;
     }
 }
