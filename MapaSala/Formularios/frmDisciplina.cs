@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +14,20 @@ namespace MapaSala.Formularios
 {
     public partial class frmDisciplina : Form
     {
-        BindingSource dados;
+        DataTable dados;
+        int LinhaSelecionada;
         public frmDisciplina()
         {
             InitializeComponent();
-            dados = new BindingSource();
+            dados = new DataTable();
+            
+            foreach (var atributos in typeof(DisciplinaEntidade).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
+
             dtGridDisciplina.DataSource = dados;
+            
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -28,9 +37,20 @@ namespace MapaSala.Formularios
             d.Nome = txtNomeDisciplina.Text;
             d.Sigla = txtSigla.Text;
 
-            dados.Add(d);
+            dados.Rows.Add(d.Linha());
+            LimparCampos();
         }
 
-        
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos(); 
+        }
+
+        private void LimparCampos()
+        {
+            numId.Value = 0;
+            txtNomeDisciplina.Text = "";
+            txtSigla.Text = "";
+        }
     }
 }
