@@ -38,6 +38,7 @@ namespace MapaSala.Formularios
             this.numId = new System.Windows.Forms.NumericUpDown();
             this.dtGridDisciplina = new System.Windows.Forms.DataGridView();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplina)).BeginInit();
             this.SuspendLayout();
@@ -102,13 +103,16 @@ namespace MapaSala.Formularios
             // 
             // dtGridDisciplina
             // 
+            this.dtGridDisciplina.AllowUserToAddRows = false;
+            this.dtGridDisciplina.AllowUserToDeleteRows = false;
+            this.dtGridDisciplina.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridDisciplina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridDisciplina.Location = new System.Drawing.Point(12, 65);
             this.dtGridDisciplina.Name = "dtGridDisciplina";
+            this.dtGridDisciplina.ReadOnly = true;
             this.dtGridDisciplina.Size = new System.Drawing.Size(616, 359);
             this.dtGridDisciplina.TabIndex = 7;
             this.dtGridDisciplina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplina_CellClick);
-
             // 
             // btnLimpar
             // 
@@ -120,11 +124,22 @@ namespace MapaSala.Formularios
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(508, 26);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(61, 23);
+            this.btnExcluir.TabIndex = 9;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // frmDisciplina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 450);
+            this.ClientSize = new System.Drawing.Size(640, 450);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.dtGridDisciplina);
             this.Controls.Add(this.numId);
@@ -155,5 +170,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.NumericUpDown numId;
         private System.Windows.Forms.DataGridView dtGridDisciplina;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

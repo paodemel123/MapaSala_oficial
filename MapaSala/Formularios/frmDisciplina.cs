@@ -59,6 +59,9 @@ namespace MapaSala.Formularios
             MessageBox.Show("Novo Valor: " + LinhaSelecionada);
         }
 
-        
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            dtGridDisciplina.Rows.RemoveAt(LinhaSelecionada);
+        }
     }
 }
