@@ -16,6 +16,7 @@ namespace MapaSala.Formularios
     {
         DataTable dados;
         int LinhaSelecionada;
+
         public frmDisciplina()
         {
             InitializeComponent();

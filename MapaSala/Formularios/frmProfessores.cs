@@ -30,6 +30,19 @@ namespace MapaSala.Formularios
 
             dados.Add(p);
 
+            LimparCampos();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+
+        private void LimparCampos()
+        {
+            txtApelido.Text = "";
+            txtNomeCompleto.Text = "";
+            numId.Value = 0;
         }
     }
 }
