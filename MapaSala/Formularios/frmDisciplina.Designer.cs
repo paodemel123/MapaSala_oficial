@@ -107,6 +107,8 @@ namespace MapaSala.Formularios
             this.dtGridDisciplina.Name = "dtGridDisciplina";
             this.dtGridDisciplina.Size = new System.Drawing.Size(616, 359);
             this.dtGridDisciplina.TabIndex = 7;
+            this.dtGridDisciplina.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplina_CellClick);
+
             // 
             // btnLimpar
             // 

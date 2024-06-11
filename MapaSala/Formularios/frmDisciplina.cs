@@ -52,5 +52,13 @@ namespace MapaSala.Formularios
             txtNomeDisciplina.Text = "";
             txtSigla.Text = "";
         }
+
+        private void dtGridDisciplina_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionada = e.RowIndex;
+            MessageBox.Show("Novo Valor: " + LinhaSelecionada);
+        }
+
+        
     }
 }
