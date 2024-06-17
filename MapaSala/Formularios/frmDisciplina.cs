@@ -68,5 +68,15 @@ namespace MapaSala.Formularios
         {
             dtGridDisciplina.Rows.RemoveAt(LinhaSelecionada);
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow minhamae = dtGridDisciplina.Rows[LinhaSelecionada];
+            minhamae.Cells[0].Value = numId.Value;
+            minhamae.Cells[1].Value = txtNomeDisciplina.Text;
+            minhamae.Cells[2].Value = txtSigla.Text;
+
+
+        }
     }
 }
