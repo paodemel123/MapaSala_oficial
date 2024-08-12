@@ -13,11 +13,19 @@ namespace MapaSala.Formularios
 {
     public partial class frmProfessores : Form
     {
-        BindingSource dados;
+        DataTable dados;
+        ProfessorDAO dao = new ProfessorDAO();
         public frmProfessores()
         {
             InitializeComponent();
-            dados = new BindingSource();
+            dados = new DataTable();
+            foreach (var atributos in typeof(ProfessoresEntidade).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
+
+            dados = dao.ObterProfessor();
+
             dtGridProfessores.DataSource = dados;
         }
 
@@ -28,7 +36,10 @@ namespace MapaSala.Formularios
             p.Apelido = txtApelido.Text;
             p.Nome = txtNomeCompleto.Text;
 
-            dados.Add(p);
+            ProfessorDAO dao = new ProfessorDAO();
+            dao.Inserir(p);
+
+            dtGridProfessores.DataSource = dao.ObterProfessor();
 
             LimparCampos();
         }

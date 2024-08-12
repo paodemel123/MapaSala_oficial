@@ -38,5 +38,10 @@ namespace MapaSala.Formularios
 
             dados.Add(sala);
         }
+
+        private void dtGridSalas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

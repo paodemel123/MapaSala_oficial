@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\DisciplinaDAO.cs" />
+    <Compile Include="DAO\ProfessorDAO.cs" />
     <Compile Include="Formularios\frmDisciplina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmSalas.resx">
       <DependentUpon>frmSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

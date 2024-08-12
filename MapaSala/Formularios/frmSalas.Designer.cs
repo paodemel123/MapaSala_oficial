@@ -147,6 +147,7 @@ namespace MapaSala.Formularios
             this.dtGridSalas.Name = "dtGridSalas";
             this.dtGridSalas.Size = new System.Drawing.Size(673, 352);
             this.dtGridSalas.TabIndex = 13;
+            this.dtGridSalas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridSalas_CellContentClick);
             // 
             // frmSalas
             // 
