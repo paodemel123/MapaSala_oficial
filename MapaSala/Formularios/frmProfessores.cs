@@ -24,7 +24,7 @@ namespace MapaSala.Formularios
                 dados.Columns.Add(atributos.Name);
             }
 
-            dados = dao.ObterProfessor();
+            dados = dao.ObterProfessores();
 
             dtGridProfessores.DataSource = dados;
         }
@@ -39,7 +39,7 @@ namespace MapaSala.Formularios
             ProfessorDAO dao = new ProfessorDAO();
             dao.Inserir(p);
 
-            dtGridProfessores.DataSource = dao.ObterProfessor();
+            dtGridProfessores.DataSource = dao.ObterProfessores();
 
             LimparCampos();
         }
@@ -54,6 +54,13 @@ namespace MapaSala.Formularios
             txtApelido.Text = "";
             txtNomeCompleto.Text = "";
             numId.Value = 0;
+        }
+
+
+
+        private void txtPesquisa_TextChanged(object sender, EventArgs e)
+        {
+            dtGridProfessores.DataSource = dao.Pesquisar(txtPesquisa.Text);
         }
     }
 }
